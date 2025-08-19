@@ -1,0 +1,239 @@
+body {
+    background: url(background/background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    color:#fff;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url('fonts/Roboto-Regular.woff2') format('woff2'),
+         url('fonts/Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.top-bar {
+    background-color: rgb(163 158 152 / 0.5);
+    width: 100%;
+    height: 4.375rem;
+    color: #fff;
+    font-size: 2rem;
+    font-style: normal;
+}
+address {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 4.375rem;
+}
+.link-with-image{
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    gap: 0.5em;
+}
+
+.link-with-image img{
+    width: 1em;
+    height: 1em;
+}
+.link-with-image:hover {
+    color: #E1E1E1
+}
+.grid-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+.header-css{
+    grid-column: 1 / -1;
+}
+a{
+    text-decoration: none;
+    font-style: normal;
+    transition: 0.2s;
+}
+a[href^="tel:"]{
+    color: #fff;
+}
+a[href^="tel:"]:hover {
+    color: #E1E1E1;
+}
+.normal-font {
+    font-style: normal;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.25rem;
+    place-items: center;
+    gap: 1.25rem;
+}
+
+.section-1{
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    grid-column: 1 / 2;
+}
+.section-1 h1{
+    margin: 0;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
+}
+.autorize-center{
+    font-size: 0.4em;
+}
+
+.section-2{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.big-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(163 158 152 / 0.5);
+    grid-column: 1 / 4;
+    padding: 0.5em;
+    font-size: 3rem;
+    text-align: center;
+}
+.big-card h3{
+    margin: 0;
+}
+.colored-word {
+    color: #DB3A00;
+}
+.small-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(163 158 152 / 0.5);
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.8em
+}
+.small-card img{
+    width: 4.46em;
+    height: 4.46em;
+}
+.big-card,
+.small-card {
+    border-radius: 1rem;
+    line-height: 1.5;
+    place-items: center;
+}
+footer {
+    display: flex;
+    gap: 1rem;
+    padding-left: 1.25rem;
+    background-color: rgb(163 158 152 / 0.5);
+}
+@media (max-width: 1600px){
+    .section-1{
+        font-size: 2.92rem;
+    }
+    .big-card{
+        font-size: 2.5rem;
+    }
+    .small-card{
+        font-size: 1.16rem;
+    }
+}
+@media (max-width: 1340px){
+    .top-bar {
+        font-size: 1.5rem;
+    }
+    .big-card {
+        font-size: 2.2rem;
+    }
+
+    .small-card {
+        font-size: 1.02rem;
+    }
+    .main{
+        gap: 1rem;
+    }
+}
+@media (max-width: 1200px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 170px auto;
+    }
+    .desktop-br{
+        display: none;
+    }
+    .section-1{
+        line-height: 1.2;
+        padding: 0 0.5em;
+    }
+}
+@media (max-width: 760px){
+    .section-1 {
+        font-size: 2.2rem;
+    }
+    .big-card {
+        font-size: 1.875rem;
+    }
+    .small-card {
+        font-size: 0.87rem;
+    }
+    .top-bar {
+        font-size: 1.3rem;
+    }
+    footer{
+        flex-direction:column;
+        padding: 5px 5px;
+    }
+    footer p {
+        margin: 0;
+    }
+}
+@media (max-width: 530px){
+    .big-card {
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 500px) {
+    address{
+        flex-direction: column;
+        height: 4.5rem;
+    }
+    footer {
+        font-size: 14px;
+    }
+}
+@media (max-width: 450px) {
+    .big-card {
+        font-size: 1.38rem;
+    }
+    footer {
+        font-size: 14px;
+    }
+}
+@media (max-width: 380px) {
+    .big-card {
+        font-size: 1.1rem;
+    }
+    footer{
+        font-size: 14px;
+    }
+}
